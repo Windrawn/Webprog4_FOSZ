@@ -1,13 +1,12 @@
-var http = require('http');
+var express = require('express');
 
-http.createServer(function (req, res) {
+var weboldalRoutes = require('./routes/weboldal');
+
+var app = express();
+
+app.set('view engine', 'ejs');
+
+app.use('/', weboldalRoutes);
 
 
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-
-    res.end('Teszt');
-
-
-
-
-}).listen(8080); 
+app.listen(8080); 
