@@ -69,8 +69,14 @@ body, html {
 }
 
 .szovegdoboz{
+	border-radius: 15px;
 	background: gray;
 	color: white;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 10px;
 }
 
 body {

@@ -14,16 +14,20 @@ router.get('/index', function (req, res) {
 	res.render('pages/index');
 });
 
+router.get('/tema', function (req, res) {
+	res.render('pages/temak/tema');
+});
+
 router.get('/fajtak', function (req, res) {
-	res.render('pages/fajtak');
+	res.render('pages/temak/fajtak');
 });
 
 router.get('/betegsegek', function (req, res) {
-	res.render('pages/betegsegek');
+	res.render('pages/temak/betegsegek');
 });
 
 router.get('/erdekessegek', function (req, res) {
-	res.render('pages/erdekessegek');
+	res.render('pages/temak/erdekessegek');
 });
 
 router.get('/bejegyzes', function (req, res) {
