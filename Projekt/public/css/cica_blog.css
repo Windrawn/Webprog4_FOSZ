@@ -67,6 +67,9 @@ body, html {
 	background: rgba(48, 46, 45, 1);
 	border-color: #4d4dff;
 }
+#login-box .controls a,#login-box .controls a:hover,#login-box .controls a:visited{
+	font-family: 'Nunito', sans-serif;
+}
 
 .szovegdoboz{
 	border-radius: 15px;

@@ -10,10 +10,6 @@ router.get('/login', function (req, res) {
 	res.render('pages/login');
 });
 
-router.get('/index', function (req, res) {
-	res.render('pages/index');
-});
-
 router.get('/tema', function (req, res) {
 	res.render('pages/temak/tema');
 });
