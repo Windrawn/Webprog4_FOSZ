@@ -3,6 +3,8 @@ var express = require('express');
 var weboldalRoutes = require('./routes/weboldal');
 var teszterRoutes = require('./routes/teszter');
 
+var mongo = require('mongodb');
+
 var app = express();
 
 app.set('view engine', 'ejs');
