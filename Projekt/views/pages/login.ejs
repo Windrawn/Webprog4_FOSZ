@@ -1,20 +1,27 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bejelentkezés</title>
+		<% include ../common/head %>
+	</head>
+	<body>
 
-<link href="/css/cica_blog.css" rel="stylesheet" type="text/css">
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<div class="container">
-  <div id="login-box">
-    <div class="logo">
-      <img src="https://orig00.deviantart.net/8935/f/2008/270/9/b/ceilican_forest_cat_100x100_by_scaperdeage.png" class="img img-responsive img-circle center-block"/>
-      <h1 class="logo-caption"><span class="tweak">B</span>ejelentkezés</h1>
-    </div>
-    <div class="controls">
-      <input type="text" name="username" placeholder="Felhasználónév" class="form-control" />
-      <input type="text" name="username" placeholder="Jelszó" class="form-control" />
-      <button type="button" class="btn btn-default btn-block btn-custom">Bejelentkezés</button>
-    </div>
-  </div>
-</div>
+		<div class="container">
+			<div id="login-box">
+				<div class="logo">
+					<img src="https://orig00.deviantart.net/8935/f/2008/270/9/b/ceilican_forest_cat_100x100_by_scaperdeage.png" class="img img-responsive img-circle center-block"/>
+					<h1 class="logo-caption"><span class="tweak">B</span>ejelentkezés</h1>
+				</div>
+				<div class="controls">
+					<form method="post">
+						<input type="text" name="username" placeholder="Felhasználónév" class="form-control" />
+						<input type="text" name="username" placeholder="Jelszó" class="form-control" />
+						<button type="button" class="btn btn-default btn-block btn-custom">Bejelentkezés</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<% include ../common/script %>
+	</body>
+</html
