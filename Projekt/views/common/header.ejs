@@ -1,3 +1,6 @@
+<% $login=true %>
+<% $admin=false %>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
 		<a class="navbar-brand" href="/">Macskás blog</a>
@@ -6,24 +9,29 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="/login">Bejelentkezés</a>
-				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/tema">Böngészés</a>
 				</li>
+				<% if ($login) { %>
 				<li class="nav-item">
 					<a class="nav-link" href="/adatok">Saját adatok</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/bejegyzesek">Saját bejegyzések</a>
 				</li>
+				<% if ($admin) { %>
 				<li class="nav-item">
 					<a class="nav-link" href="/users">Felhasználók</a>
 				</li>
-				<li class="nav-item">
+				<% } %>
+				<li class="nav-item active">
 					<a class="nav-link" href="/logout">Kijelentkezés</a>
 				</li>
+				<% } else { %>
+				<li class="nav-item active">
+					<a class="nav-link" href="/login">Bejelentkezés</a>
+				</li>
+				<% } %>
 			</ul>
 		</div>
 	</div>
