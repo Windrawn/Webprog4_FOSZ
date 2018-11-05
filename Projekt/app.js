@@ -4,8 +4,6 @@ var weboldalRoutes = require('./routes/weboldal');
 var teszterRoutes = require('./routes/teszter');
 var userRoutes = require('./routes/user');
 
-var mongo = require('mongodb');
-
 var app = express();
 
 app.set('view engine', 'ejs');
