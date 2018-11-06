@@ -11,11 +11,7 @@ var objectRepository = {
 
 router.post(
     '/postLogin',
-    //function (next) {console.log('Bejelentkezési kérelem'); return next();},
     MWlogin(objectRepository)
-    /*function(req, res) {
-        res.render('pages/home')
-    }*/
 )
 
 module.exports = router;
