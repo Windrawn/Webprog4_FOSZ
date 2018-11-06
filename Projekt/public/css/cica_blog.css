@@ -75,49 +75,19 @@ body, html {
 	border-radius: 15px;
 	background: gray;
 	color: white;
-	padding-top: 1px;
-	padding-bottom: 1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	padding-left: 10px;
 	padding-right: 10px;
-	margin-bottom: 10px;
 }
 
-.szovegdoboz table{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 100%;
-	border-collapse: separate;
-}
-.szovegdoboz table tr{
-}
-.szovegdoboz table tr th{
-	margin-left: 4px;
-	font-size: 50px;
-	border-radius: 10px;
-}
-.szovegdoboz table tr #szoveg{
-	padding: 4px;
-	margin-left: 4px;
-	font-size: 40px;
-	border-radius: 10px;
-}
-.szovegdoboz table tr #kep{
-	width: 200px;
-	height: 200px;
-	background: lightgray;
-	margin-left: 4px;
-	text-align: center;
-}
-.szovegdoboz table tr #kep img{
+.szovegdoboz img{
 	width: auto;
-	height: 200px;
-	border-radius: 50px;
+	height: 300px;
 }
 .szovegdoboz a,.szovegdoboz a:hover,.szovegdoboz a:visited{
 	color: Black;
 }
-
-
 
 body {
     background: linear-gradient(132deg, #4d4dff, #262626);
