@@ -6,6 +6,14 @@ var userRoutes = require('./routes/user');
 
 var app = express();
 
+var session = require('express-session');
+ 
+app.use(session({
+  secret: 'nagyontitkoskiscuccnehogyatirdmerteljovokerted',
+  resave: false,
+  saveUninitialized: false
+}));
+
 app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname + '/public'));

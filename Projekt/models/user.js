@@ -9,6 +9,7 @@ var UserSchema = new Schema({
 	email: {type: String},
 	admin: {type: Boolean},
 },
+
 { collection : 'user' });
 
 module.exports = db.model('User', UserSchema);

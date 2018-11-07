@@ -10,10 +10,15 @@ function login(objectRepository) {
 			console.log('Bejelentkezési kérelem'); return next;
 		}).then(function (response) {
 			if (Array.isArray(response) && response.length) {
-				return res.redirect('/');
+				console.log('Sikeres Bejelentkezés');
+				return res.redirect('/pages/home');
+				
+				
 			}
 			else {
-				return res.redirect('/login');
+				console.log('Sikertelen Bejelentkezés!');
+				return res.redirect('/');
+				
 			}
 		})
 	}
