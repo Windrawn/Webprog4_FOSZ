@@ -2,16 +2,9 @@ var express = require('express');
 
 var router = express.Router();
 
+//kezdőlap (van rész amihez nem kell bejelentkezni)
 router.get('/', function (req, res) {
-	res.render('pages/login');
-});
-
-
-router.get('/pages/home', function (req, res) {
-	
 	res.render('pages/home');
-
-	
 });
 
 router.get('/login', function (req, res) {
@@ -27,7 +20,7 @@ router.get('/logout', function(req, res) {
         else  
         {  
           console.log('Sikeresen Kijelentkezés!');
-          res.redirect("/login");
+          res.redirect("/");
         }  
     });
 });

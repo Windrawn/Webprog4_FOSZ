@@ -11,13 +11,13 @@ function login(objectRepository) {
 		}).then(function (response) {
 			if (Array.isArray(response) && response.length) {
 				console.log('Sikeres Bejelentkezés');
-				return res.redirect('/pages/home');
+				return res.redirect('/');
 				
 				
 			}
 			else {
 				console.log('Sikertelen Bejelentkezés!');
-				return res.redirect('/');
+				return res.redirect('/login');
 				
 			}
 		})
