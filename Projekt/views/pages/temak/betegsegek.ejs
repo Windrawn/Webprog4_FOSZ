@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Macskás blog - Fajták</title>
+		<title>Macskás blog - Betegségek</title>
 		<% include ../../common/head %>
 	</head>
 	<body>
@@ -10,21 +10,43 @@
 		
 		<div class="container">
 			<div class="szovegdoboz">
-				<h1>Fajták:</h1>
+				<h1 id="black">Betegségek:</h1>
+			</div>
+			<div class="szovegdoboz">
+				<hr>
 				<%  %>
+				<% $enyem=true %>
+				<% if ($enyem) { %>
 				<div class="row">
 					<div class="col-md-5">
 						<img class="img-fluid rounded mb-3 mb-md-0" src="" alt="">
 					</div>
 					<div class="col-md-7">
 						<h3>Cím</h3>
-						<p>Író:</p>
-						<a class="btn btn-primary" href="/fajtak">Tovább</a>
+						<p>Feltöltő: </p>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<a class="btn btn-primary" href="#">Tovább</a>
+							<a class="btn btn-secondary" href="#">Szerkesztés</a>
+						</div>
 					</div>
 				</div>
 				<hr>
+				<% }else { %>
+				<div class="row">
+					<div class="col-md-5">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="" alt="">
+					</div>
+					<div class="col-md-7">
+						<h3>Cím</h3>
+						<p>Feltöltő: </p>
+						<a class="btn btn-primary" href="#">Tovább</a>
+					</div>
+				</div>
+				<hr>
+				<% } %>
 				<%  %>
-				
+			</div>
+			<div class="szovegdoboz">
 				<ul class="pagination justify-content-center">
 					<li class="page-item">
 						<a class="page-link" href="#" aria-label="Previous">
@@ -44,6 +66,12 @@
 						</a>
 					</li>
 				</ul>
+				<br>
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<a class="btn btn-info" href="">Az oldal tetejére</a>
+					<a class="btn btn-info" href="/tema">Vissza</a>
+					<a class="btn btn-info" href="/">Vissza a kezdőoldalra</a>
+				</div>
 			</div>
 		</div>
 
