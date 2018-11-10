@@ -2,7 +2,7 @@ var db = require('../modules/db');
 
 var Schema = db.Schema;
 
-var UserSchema = new Schema({
+var BejegyzesekSchema = new Schema({
 	_id: Schema.Types.ObjectId,
 	username: {type: String},
 	tema: {type: String},
@@ -13,4 +13,4 @@ var UserSchema = new Schema({
 
 { collection : 'bejegyzesek' });
 
-module.exports = db.model('User', UserSchema);
+module.exports = db.model('Bejegyzesek', BejegyzesekSchema);
