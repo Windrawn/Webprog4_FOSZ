@@ -41,13 +41,4 @@ router.get('/erdekessegek', function (req, res) {
 	res.render('pages/temak/erdekessegek');
 });
 
-router.get('/bejegyzes', function (req, res) {
-	res.render('pages/bejegyzes');
-});
-
-router.get('/bejegyzesek', function (req, res) {
-	res.render('pages/sajat/bejegyzesek');
-});
-
-
 module.exports = router;
