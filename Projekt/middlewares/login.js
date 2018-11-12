@@ -12,13 +12,10 @@ function login(objectRepository) {
 			if (Array.isArray(response) && response.length) {
 				console.log('Sikeres Bejelentkezés');
 				return res.redirect('/');
-				
-				
 			}
 			else {
 				console.log('Sikertelen Bejelentkezés!');
 				return res.redirect('/login');
-				
 			}
 		})
 	}
