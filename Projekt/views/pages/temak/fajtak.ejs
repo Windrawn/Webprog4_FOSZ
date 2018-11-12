@@ -8,41 +8,82 @@
 		
 		<% include ../../common/header %>
 		
-				<div class="container">
+		<div class="container">
 			<div class="szovegdoboz">
 				<h1 id="black">Fajták:</h1>
 			</div>
 			<div class="szovegdoboz">
 				<hr>
-				<%  %>
+				<% for(var i=0; i<bejegyzesek.length;i++){ %>
 				<% $enyem=false %>
+				<% $first=(bejegyzesek[0]==bejegyzesek[i]) %>
 				<% if ($enyem) { %>
+				
+				<% if ($first) { %>
 				<div class="row">
 					<div class="col-md-5">
-						<img class="img-fluid rounded mb-3 mb-md-0" src="" alt="">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
 					</div>
 					<div class="col-md-7">
-						<h3>Cím</h3>
-						<h4>Típus: </h4>
-						<p>Feltöltő: </p>
-						<a class="btn btn-secondary" href="#">Szerkesztés</a>
+						<h3><%= bejegyzesek[i].cim %></h3>
+						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<a class="btn btn-primary" href="#">Tovább</a>
+							<a class="btn btn-secondary" href="#">Szerkesztés</a>
+						</div>
 					</div>
 				</div>
 				<hr>
 				<% }else { %>
 				<div class="row">
 					<div class="col-md-5">
-						<img class="img-fluid rounded mb-3 mb-md-0" src="" alt="">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
 					</div>
 					<div class="col-md-7">
-						<h3>Cím</h3>
-						<h4>Típus: </h4>
-						<p>Feltöltő: </p>
+						<h3><%= bejegyzesek[i].cim %></h3>
+						<h4>Típus: <%= bejegyzesek[i].tartalom %></h4>
+						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<a class="btn btn-secondary" href="#">Szerkesztés</a>
 					</div>
 				</div>
 				<hr>
 				<% } %>
-				<%  %>
+				
+				<% }else { %>
+				
+				<% if ($first) { %>
+				<div class="row">
+					<div class="col-md-5">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
+					</div>
+					<div class="col-md-7">
+						<h3><%= bejegyzesek[i].cim %></h3>
+						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<a class="btn btn-primary" href="#">Tovább</a>
+					</div>
+				</div>
+				<hr>
+				<% }else { %>
+				<div class="row">
+					<div class="col-md-5">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
+					</div>
+					<div class="col-md-7">
+						<h3><%= bejegyzesek[i].cim %></h3>
+						<h4>Típus: <%= bejegyzesek[i].tartalom %></h4>
+						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+					</div>
+				</div>
+				<hr>
+				<% } %>
+				
+				<% } %>
+				<% } %>
+				<% if (bejegyzesek.length == 0) { %>
+				<h2>Sorry, nincs bejegyzés ebben a témában</h2>
+				<hr>
+				<% } %>
+				
 			</div>
 			<div class="szovegdoboz">
 				<ul class="pagination justify-content-center">

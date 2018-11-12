@@ -23,6 +23,11 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(bodyParser.json());
+app.use(function(req, res, next) {
+  res.locals.user = req.session.user;
+  res.locals.login = req.session.login;
+  next();
+});
 
 app.use('/', weboldalRoutes);
 app.use('/', teszterRoutes);

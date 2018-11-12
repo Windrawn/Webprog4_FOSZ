@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<% $login=true %>
-<% $nev="Test12" %>
+<% if (typeof !user) { %>
+<% login=false %>
+<% } %>
 <html>
 	<head>
 		<title>Macskás blog</title>
@@ -12,14 +13,15 @@
 
 		<div class="container">
 			<div class="szovegdoboz">
-				<% if (!$login) { %>
+				<% if (!login) { %>
 				<h1 id="black"><i><b>Üdvözlünk a Macskás blogon! :)</b></i></h1>
-				<p>Ez a blog macskásoknak, macska imádóknak, illetve leendő macska tartóknak jött létre.</p> 
-				<p>Itt meg tekintheted a macska fajtákat, a macska betegségeket, illetve érdekességeket találhatsz a macskákról.</p>
 				<% } else { %>
-				<h1 id="black"><i><b>Üdvözlünk a Macskás blogon, <%= $nev %>!</b></i></h1>
+				<h1 id="black"><i><b>Üdvözlünk a Macskás blogon, <%= nev %>! :)</b></i></h1>
+				<% } %>
 				<p>Ez a blog macskásoknak, macska imádóknak, illetve leendő macska tartóknak jött létre.</p> 
 				<p>Itt meg tekintheted a macska fajtákat, a macska betegségeket, illetve érdekességeket találhatsz a macskákról.</p>
+				<% if (!login) { %>
+				<p>Új bejegyzés írásához be kell jelentkezni!</p>
 				<% } %>
 			</div>
 		</div>

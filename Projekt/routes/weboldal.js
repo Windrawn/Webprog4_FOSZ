@@ -1,16 +1,12 @@
 var express = require('express');
-
 var router = express.Router();
+
+
 
 //kezdőlap (van rész amihez nem kell bejelentkezni)
 router.get('/', function (req, res) {
 	res.render('pages/home');
 });
-
-router.get('/login', function (req, res) {
-	res.render('pages/login');
-});
-
 
 router.get('/logout', function(req, res) {
   req.session.destroy(function(err){  
@@ -27,18 +23,6 @@ router.get('/logout', function(req, res) {
 
 router.get('/tema', function (req, res) {
 	res.render('pages/temak/tema');
-});
-
-router.get('/fajtak', function (req, res) {
-	res.render('pages/temak/fajtak');
-});
-
-router.get('/betegsegek', function (req, res) {
-	res.render('pages/temak/betegsegek');
-});
-
-router.get('/erdekessegek', function (req, res) {
-	res.render('pages/temak/erdekessegek');
 });
 
 module.exports = router;

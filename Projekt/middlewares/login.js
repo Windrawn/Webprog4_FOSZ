@@ -11,6 +11,8 @@ function login(objectRepository) {
 		}).then(function (response) {
 			if (Array.isArray(response) && response.length) {
 				console.log('Sikeres Bejelentkezés');
+				req.session.user = user;
+				req.session.login = true;
 				return res.redirect('/');
 			}
 			else {

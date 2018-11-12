@@ -9,6 +9,10 @@ var objectRepository = {
     modelUser: modelUser
 }
 
+router.get('/login', function (req, res) {
+	res.render('pages/login');
+});
+
 router.post(
     '/postLogin',
     MWlogin(objectRepository)
