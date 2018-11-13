@@ -7,7 +7,8 @@ var objectRepository = {
     Bejegyzesekmodel: Bejmodel
 }
 
-router.get('/bejegyzes', function (req, res) {
+router.get('/bejegyzes/:id', function (req, res) {
+	var request = req.params.id;
 	res.render('pages/bejegyzes');
 });
 

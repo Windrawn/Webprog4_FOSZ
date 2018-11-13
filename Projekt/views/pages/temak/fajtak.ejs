@@ -14,10 +14,14 @@
 			</div>
 			<div class="szovegdoboz">
 				<hr>
-				<% for(var i=0; i<bejegyzesek.length;i++){ %>
-				<% $enyem=false %>
-				<% $first=(bejegyzesek[0]==bejegyzesek[i]) %>
-				<% if ($enyem) { %>
+				<% for(var i=0; i<bejegyzesek.length;i++){
+				if (typeof !user){
+				$enyem=false
+				} else{
+				$enyem=(user.username==bejegyzesek[i].username)
+				}
+				$first=(bejegyzesek[0]==bejegyzesek[i])
+				if ($enyem) { %>
 				
 				<% if ($first) { %>
 				<div class="row">
@@ -28,7 +32,7 @@
 						<h3><%= bejegyzesek[i].cim %></h3>
 						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
 						<div class="btn-group" role="group" aria-label="Basic example">
-							<a class="btn btn-primary" href="#">Tovább</a>
+							<a class="btn btn-primary" href="/bejegyzes/<%= bejegyzesek[i]._id %>">Tovább</a>
 							<a class="btn btn-secondary" href="#">Szerkesztés</a>
 						</div>
 					</div>
@@ -59,7 +63,7 @@
 					<div class="col-md-7">
 						<h3><%= bejegyzesek[i].cim %></h3>
 						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
-						<a class="btn btn-primary" href="#">Tovább</a>
+						<a class="btn btn-primary" href="/bejegyzes/<%= bejegyzesek[i]._id %>">Tovább</a>
 					</div>
 				</div>
 				<hr>
@@ -86,6 +90,7 @@
 				
 			</div>
 			<div class="szovegdoboz">
+				<!--
 				<ul class="pagination justify-content-center">
 					<li class="page-item">
 						<a class="page-link" href="#" aria-label="Previous">
@@ -106,6 +111,7 @@
 					</li>
 				</ul>
 				<br>
+				-->
 				<div class="btn-group" role="group" aria-label="Basic example">
 					<a class="btn btn-info" href="">Az oldal tetejére</a>
 					<a class="btn btn-info" href="/tema">Vissza</a>
