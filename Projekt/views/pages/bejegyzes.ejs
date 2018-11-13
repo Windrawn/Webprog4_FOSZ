@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Macskás blog - <%= bejegyzes.cim %></title>
+		<% include ../common/head %>
+	</head>
+	<body>
+		
+		<% include ../common/header %>
+
+		<div class="container">
+			<div class="szovegdoboz">
+				<hr>
+				<% if (typeof !user){
+				$enyem=false
+				} else{
+				$enyem=(user.username==bejegyzes.username)
+				}
+				if ($enyem) { %>
+				<div class="row">
+					<div class="col-md-7">
+						<h3><%= bejegyzes.cim %></h3>
+						<p>Feltöltő: <%= bejegyzes.username %></p>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<a class="btn btn-secondary" href="#">Szerkesztés</a>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzes.kep %>" alt="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p><%= bejegyzes.tartalom %></p>
+					</div>
+				</div>
+				<% }else { %>
+				<div class="row">
+					<div class="col-md-7">
+						<h3><%= bejegyzes.cim %></h3>
+						<p>Feltöltő: <%= bejegyzes.username %></p>
+						<div class="btn-group" role="group" aria-label="Basic example">
+						</div>
+					</div>
+					<div class="col-md-5">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzes.kep %>" alt="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p><%= bejegyzes.tartalom %></p>
+					</div>
+				</div>
+				<% } %>
+				<hr>
+			</div>
+		</div>
+
+		<% include ../common/footer %>
+		<% include ../common/script %>
+		
+	</body>
+</html>
