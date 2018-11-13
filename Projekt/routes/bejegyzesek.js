@@ -27,19 +27,23 @@ router.get('/fajtak',
 	}
 );
 
-router.get('/betegsegek', function (req, res) {
-	var bejegyzesek = TemaKeres(objectRepository, "Betegségek")
-	res.render('pages/temak/betegsegek',{
-		bejegyzesek: bejegyzesek
-	});
-});
+router.get('/betegsegek',
+	function (req, res, next) {
+		TemaKeres(objectRepository, "Betegségek", function (result) {
+			console.log(result);
+			res.render('pages/temak/betegsegek', {bejegyzesek: result});
+		});
+	}
+);
 
-router.get('/erdekessegek', function (req, res) {
-	var bejegyzesek = TemaKeres(objectRepository, "Érdekességek")
-	res.render('pages/temak/erdekessegek',{
-		bejegyzesek: bejegyzesek
-	});
-});
+router.get('/erdekessegek',
+	function (req, res, next) {
+		TemaKeres(objectRepository, "Érdekességek", function (result) {
+			console.log(result);
+			res.render('pages/temak/erdekessegek', {bejegyzesek: result});
+		});
+	}
+);
 
 
 module.exports = router;
