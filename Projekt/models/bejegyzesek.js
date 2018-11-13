@@ -8,7 +8,7 @@ var BejegyzesekSchema = new Schema({
 	tema: {type: String},
 	cim: {type: String},
 	tartalom: {type: String},
-	kep: {type: String},
+	kep: {type: String}
 },
 
 { collection : 'bejegyzesek' });
