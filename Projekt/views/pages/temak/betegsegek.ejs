@@ -14,18 +14,22 @@
 			</div>
 			<div class="szovegdoboz">
 				<hr>
-				<%  %>
-				<% $enyem=true %>
-				<% if ($enyem) { %>
+				<% for(var i=0; i<bejegyzesek.length;i++){
+				if (typeof !user){
+				$enyem=false
+				} else{
+				$enyem=(user.username==bejegyzesek[i].username)
+				}
+				if ($enyem) { %>
 				<div class="row">
 					<div class="col-md-5">
-						<img class="img-fluid rounded mb-3 mb-md-0" src="" alt="">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
 					</div>
 					<div class="col-md-7">
-						<h3>Cím</h3>
-						<p>Feltöltő: </p>
+						<h3><%= bejegyzesek[i].cim %></h3>
+						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
 						<div class="btn-group" role="group" aria-label="Basic example">
-							<a class="btn btn-primary" href="#">Tovább</a>
+							<a class="btn btn-primary" href="/bejegyzes/<%= bejegyzesek[i]._id %>">Tovább</a>
 							<a class="btn btn-secondary" href="#">Szerkesztés</a>
 						</div>
 					</div>
@@ -34,19 +38,24 @@
 				<% }else { %>
 				<div class="row">
 					<div class="col-md-5">
-						<img class="img-fluid rounded mb-3 mb-md-0" src="" alt="">
+						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
 					</div>
 					<div class="col-md-7">
-						<h3>Cím</h3>
-						<p>Feltöltő: </p>
-						<a class="btn btn-primary" href="#">Tovább</a>
+						<h3><%= bejegyzesek[i].cim %></h3>
+						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<a class="btn btn-primary" href="/bejegyzes/<%= bejegyzesek[i]._id %>">Tovább</a>
 					</div>
 				</div>
 				<hr>
 				<% } %>
-				<%  %>
+				<% } %>
+				<% if (bejegyzesek.length == 0) { %>
+				<h2>Sorry, nincs bejegyzés ebben a témában</h2>
+				<hr>
+				<% } %>
 			</div>
 			<div class="szovegdoboz">
+				<!--
 				<ul class="pagination justify-content-center">
 					<li class="page-item">
 						<a class="page-link" href="#" aria-label="Previous">
@@ -67,6 +76,7 @@
 					</li>
 				</ul>
 				<br>
+				-->
 				<div class="btn-group" role="group" aria-label="Basic example">
 					<a class="btn btn-info" href="">Az oldal tetejére</a>
 					<a class="btn btn-info" href="/tema">Vissza</a>
