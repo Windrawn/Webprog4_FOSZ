@@ -20,8 +20,7 @@ var temp;
 
 router.get('/fajtak',
 	function (req, res, next) {
-		TemaKeres(objectRepository, "1", function (result) {
-			console.log(result);
+		TemaKeres(objectRepository, "Fajták", function (result) {
 			res.render('pages/temak/fajtak', {bejegyzesek: result});
 		});
 	}
@@ -30,7 +29,6 @@ router.get('/fajtak',
 router.get('/betegsegek',
 	function (req, res, next) {
 		TemaKeres(objectRepository, "Betegségek", function (result) {
-			console.log(result);
 			res.render('pages/temak/betegsegek', {bejegyzesek: result});
 		});
 	}
@@ -39,7 +37,6 @@ router.get('/betegsegek',
 router.get('/erdekessegek',
 	function (req, res, next) {
 		TemaKeres(objectRepository, "Érdekességek", function (result) {
-			console.log(result);
 			res.render('pages/temak/erdekessegek', {bejegyzesek: result});
 		});
 	}
