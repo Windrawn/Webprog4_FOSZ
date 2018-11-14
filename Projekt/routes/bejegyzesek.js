@@ -1,16 +1,20 @@
 var express = require('express');
 var router = express.Router();
 var Bejmodel = new require('../models/bejegyzesek');
-
-var TemaKeres = require('../middlewares/bejegyzesekLekeresTemaAlapjan');
 var objectRepository = {
     Bejegyzesekmodel: Bejmodel
 }
 
-router.get('/bejegyzes/:id', function (req, res) {
-	var request = req.params.id;
-	res.render('pages/bejegyzes');
-});
+var TemaKeres = require('../middlewares/bejegyzesekLekeresTemaAlapjan');
+var BejegyzesIDKeres = require('../middlewares/bejegyzesekLekeresIDAlapjan');
+
+router.get('/bejegyzes/:id',
+	function (req, res) {
+		BejegyzesIDKeres(objectRepository, req.params.id, function (result) {
+			res.render('pages/bejegyzes', {bejegyzes: result});
+		});
+	}
+);
 
 router.get('/bejegyzesek', function (req, res) {
 	res.render('pages/sajat/bejegyzesek');
