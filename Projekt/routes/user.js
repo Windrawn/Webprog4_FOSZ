@@ -16,9 +16,9 @@ router.get('/login', function (req, res) {
 router.post('/postLogin',
     function (req, res) {
         MWlogin(objectRepository, req, res, function (result) {
-            req.session.user = result.user;
+            req.session.user = result.username;
             req.session.login = true;
-            return res.redirect('/');
+            res.redirect('/');
         })
     }
 )
