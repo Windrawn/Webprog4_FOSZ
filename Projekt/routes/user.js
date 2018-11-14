@@ -13,9 +13,14 @@ router.get('/login', function (req, res) {
 	res.render('pages/login');
 });
 
-router.post(
-    '/postLogin',
-    MWlogin(objectRepository)
+router.post('/postLogin',
+    function (req, res) {
+        MWlogin(objectRepository, req, res, function (result) {
+            req.session.user = result.user;
+            req.session.login = true;
+            return res.redirect('/');
+        })
+    }
 )
 
 
