@@ -1,7 +1,7 @@
 var a;
 
 function userLekeresIDAlapjan(objectRepository, id, callback) {
-		objectRepository.modelUser.find({_id: id}, "_id username email admin")
+		objectRepository.modelUser.findOne({_id: id}, "_id username email admin")
 		.exec(function (err, response) {
 			if (Array.isArray(response) && response.length) {
 				a = response;
