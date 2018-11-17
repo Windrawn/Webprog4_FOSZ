@@ -52,4 +52,9 @@ router.get('/userdelete/:id', function (req, res) {
 	res.redirect('/users');
 });
 
+router.get('/adatok', function (req, res) {
+	//saját user lekérdezése
+	res.redirect('/sajat/adatok',{user: {} });
+});
+
 module.exports = router;

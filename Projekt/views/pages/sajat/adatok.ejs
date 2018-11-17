@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Macskás blog - Saját adatok</title>
+		<% include ../../common/head %>
+	</head>
+	<body>
+		
+		<% include ../../common/header %>
+		
+		<div class="szovegdoboz">
+			<h1 id="black">Saját adatok:</h1>
+		</div>
+		<div class="szovegdoboz">
+			<hr>
+			<table class="users">
+				<tr>
+					<th>Felhasználónév</th>
+					<th>E-Mail cím</th>
+					<th>Műveletek</th>
+				</tr>
+				<tr>
+					<td><%=user.username %></td>
+					<td><%=user.email %></td>
+					<td>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<a class="btn btn-info" href="/user/userEdit/<%=user._id %>">Szerkesztés</a>
+							<!--<a class="btn btn-info" href="/userdelete/<%=user._id %>">Törlés</a>-->
+						</div>
+					</td>
+				</tr>
+			</table>
+			<hr>
+		</div>
+		<div class="szovegdoboz">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<a class="btn btn-info" href="/">Vissza a kezdőoldalra</a>
+			</div>
+		</div>
+		
+		<% include ../../common/footerFixed %>
+		<% include ../../common/script %>
+		
+	</body>
+</html>

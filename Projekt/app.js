@@ -30,7 +30,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', weboldalRoutes);
-app.use('/', teszterRoutes);
+//app.use('/', teszterRoutes);
 app.use('/', userRoutes);
 app.use('/', bejegyzesekRoutes);
 
