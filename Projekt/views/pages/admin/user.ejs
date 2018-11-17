@@ -9,22 +9,41 @@
 		<% include ../../common/header %>
 		
 		<div class="szovegdoboz">
-		 <div class="formuser">
-			<% if(mod=="adminNew"){ %>
-			<form method="POST" action="/postUser">
-				<input type="text" name="username" placeholder="Felhasználónév" class="form-control" />
-				<input type="text" name="email" placeholder="E-mail cím" class="form-control" />
-				<input type="password" name="password" placeholder="Jelszó" class="form-control" />
-				<input type="password" name="password_again" placeholder="Jelszó ismét" class="form-control" />
-				<label>Admin: </label>
-				<input type="checkbox" name="admin" value="true" />
-				<button type="submit" class="btn btn-default btn-block btn-custom">Bejelentkezés</button>
-			</form>
-			<% }else if(mod=="adminEdit"){ %>
-			
-			<% }else if(mod=="userEdit"){ %>
-			
-			<% } %>
+			<h1 id="black">User edit</h1>
+			<div class="formuser">
+				<form method="POST" action="/postUser">
+					<% if(mod=="adminNew"){ %>
+					<input type="text" name="username" placeholder="Felhasználónév" class="form-control" />
+					<input type="text" name="email" placeholder="E-mail cím" class="form-control" />
+					<input type="password" name="password" placeholder="Jelszó" class="form-control" />
+					<input type="password" name="password_again" placeholder="Jelszó ismét" class="form-control" />
+					<label>Admin: </label>
+					<input type="checkbox" name="admin" />
+					<button type="submit" class="btn btn-default btn-block btn-custom">Küldés</button>
+					<% }else if(mod=="adminEdit"){ %>
+					<input type="hidden" name="_id" value="<%=user._id %>" />
+					<input type="text" name="username" placeholder="Felhasználónév" value="<%=user.username %>" class="form-control" />
+					<input type="text" name="email" placeholder="E-mail cím" value="<%=user.email %>" class="form-control" />
+					<input type="password" name="password" placeholder="Jelszó" class="form-control" />
+					<input type="password" name="password_again" placeholder="Jelszó ismét" class="form-control" />
+					<label>Admin: </label>
+					<% if(user.admin){ %>
+					<input type="checkbox" name="admin" checked />
+					<% }else { %>
+					<input type="checkbox" name="admin" />
+					<% } %>
+					<button type="submit" class="btn btn-default btn-block btn-custom">Küldés</button>
+					<% }else if(mod=="userEdit"){ %>
+					<input type="hidden" name="_id" value="<%=user._id %>" />
+					<input type="text" name="username" placeholder="Felhasználónév" value="<%=user.username %>" class="form-control" readonly />
+					<input type="text" name="email" placeholder="E-mail cím" value="<%=user.email %>" class="form-control" />
+					<input type="password" name="password" placeholder="Jelszó" class="form-control" />
+					<input type="password" name="password_again" placeholder="Jelszó ismét" class="form-control" />
+					<button type="submit" class="btn btn-default btn-block btn-custom">Küldés</button>
+					<% }else { %>
+					<p>Váratlan hiba történt</p>
+					<% } %>
+				</form>
 			</div>
 		</div>
 		<div class="szovegdoboz">

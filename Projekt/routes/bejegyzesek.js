@@ -7,6 +7,7 @@ var objectRepository = {
 
 var TemaKeres = require('../middlewares/bejegyzesekLekeresTemaAlapjan');
 var BejegyzesIDKeres = require('../middlewares/bejegyzesekLekeresIDAlapjan');
+var MWbejegyzesHozzaadas = require('../middlewares/bejegyzesHozzaadas');
 
 router.get('/bejegyzes/:id',
 	function (req, res) {
@@ -20,7 +21,13 @@ router.get('/bejegyzesek', function (req, res) {
 	res.render('pages/sajat/bejegyzesek');
 });
 
-var temp;
+router.post('/bejegyzesHozzaadas',
+    function (req, res) {
+        MWbejegyzesHozzaadas(objectRepository, req, res, function () {
+            //todo
+        })
+    }
+)
 
 router.get('/fajtak',
 	function (req, res, next) {

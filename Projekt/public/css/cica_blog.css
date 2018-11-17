@@ -143,6 +143,16 @@ body {
 	width: 30%;
 }
 
+.szovegdoboz .users{
+	border: 4px black solid;
+	width: 90%;
+}
+.szovegdoboz .users th,.szovegdoboz .users td{
+	padding: 5px;
+	border: 2px black solid;
+	width: 33.33%;
+}
+
 
 /* 
 	
