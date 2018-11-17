@@ -30,5 +30,26 @@ router.post('/postLogin',
     }
 )
 
+router.get('/users', function (req, res) {
+	//User listát vár az oldal
+	res.render('pages/admin/users', {users: []});
+});
+
+router.get('/user/:mod', function (req, res) {
+	res.render('pages/admin/user', {mod: "" });
+});
+
+router.get('/user/:mod/:id', function (req, res) {
+	//egy user vár az oldal
+	res.render('pages/admin/user', {mod: "" ,user: {} });
+});
+
+router.post('/postUser', function (req, res) {
+	//user feltöltése adatbázisba
+});
+
+router.get('/userdelete/:id', function (req, res) {
+	res.redirect('/users');
+});
 
 module.exports = router;

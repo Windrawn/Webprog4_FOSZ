@@ -123,6 +123,7 @@ body {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 20px;
+
 }
 
 .szovegdoboz #black{
@@ -140,6 +141,16 @@ body {
 }
 .szovegdoboz .formuser{
 	width: 30%;
+}
+
+.szovegdoboz .users{
+	border: 4px black solid;
+	width: 90%;
+}
+.szovegdoboz .users th,.szovegdoboz .users td{
+	padding: 5px;
+	border: 2px black solid;
+	width: 33.33%;
 }
 
 
@@ -328,4 +339,19 @@ path.two {
 
 .right{
 	float: left;
+}
+
+
+/* 
+	
+	------------------- Betűtípusok -------------------
+
+*/
+
+
+.fancy_text {
+	font-family: Spicy Rice;
+	font-size: 50px;
+	text-shadow: 4px 4px 8px #000;
+	margin-bottom: 15px;
 }
