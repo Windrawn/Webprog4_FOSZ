@@ -22,7 +22,13 @@ router.get('/teszt', function (req, res) {
 });
 
 router.get('/teszt2', function (req, res) {
-	res.render('pages/admin/user', {mod: "adminNew"});
+	res.render('pages/admin/user', {mod: "userEdit", user: {
+		_id: 1,
+		username: "Test1",
+		password: "",
+		email: "test1@test.hu",
+		admin: true
+	}});
 });
 
 module.exports = router;
