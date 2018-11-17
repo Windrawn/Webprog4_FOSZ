@@ -356,3 +356,62 @@ path.two {
 	text-shadow: 4px 4px 8px #000;
 	margin-bottom: 15px;
 }
+
+
+/* 
+	
+	------------------- Vissza nyíl -------------------
+
+*/
+
+
+
+#backArrow_Anim {
+  width: 15vw;
+  height: 15vh;
+  display: flex;
+}
+
+.backArrow {
+  width: 2vw;
+  height: 2vw;
+  border: 1vw solid;
+  border-color: black transparent transparent black;
+  transform: rotate(-45deg);
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+
+.backArrow_Sliding {
+  position: absolute;
+  -webkit-animation: slide 3s linear infinite; 
+          animation: slide 4s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s; 
+    animation-delay: 1s;
+}
+.delay2 {
+  -webkit-animation-delay: 2s; 
+    animation-delay: 2s;
+}
+.delay3 {
+  -webkit-animation-delay: 3s; 
+    animation-delay: 3s;
+}
+
+
+@-webkit-keyframes slide {
+    0% { opacity:0; transform: translateX(5vw); }	
+   20% { opacity:1; transform: translateX(3vw); }	
+   80% { opacity:1; transform: translateX(-3vw); }	
+  100% { opacity:0; transform: translateX(-5vw); }	
+}
+@keyframes slide {
+    0% { opacity:0; transform: translateX(5vw); }	
+   20% { opacity:1; transform: translateX(3vw); }	
+   80% { opacity:1; transform: translateX(-3vw); }	
+  100% { opacity:0; transform: translateX(-5vw); }	
+}
