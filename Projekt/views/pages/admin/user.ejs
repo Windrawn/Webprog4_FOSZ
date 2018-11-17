@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Macskás blog - Felhasználó szerkesztő</title>
+		<% include ../../common/head %>
+	</head>
+	<body>
+		
+		<% include ../../common/header %>
+		
+		<div class="szovegdoboz">
+		 <div class="formuser">
+			<% if(mod=="adminNew"){ %>
+			<form method="POST" action="/postUser">
+				<input type="text" name="username" placeholder="Felhasználónév" class="form-control" />
+				<input type="text" name="email" placeholder="E-mail cím" class="form-control" />
+				<input type="password" name="password" placeholder="Jelszó" class="form-control" />
+				<input type="password" name="password_again" placeholder="Jelszó ismét" class="form-control" />
+				<label>Admin: </label>
+				<input type="checkbox" name="admin" value="true" />
+				<button type="submit" class="btn btn-default btn-block btn-custom">Bejelentkezés</button>
+			</form>
+			<% }else if(mod=="adminEdit"){ %>
+			
+			<% }else if(mod=="userEdit"){ %>
+			
+			<% } %>
+			</div>
+		</div>
+		<div class="szovegdoboz">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<% if(mod=="adminNew"){ %>
+				<a class="btn btn-info" href="/users">Vissza</a>
+				<% }else if(mod=="adminEdit"){ %>
+				<a class="btn btn-info" href="/users">Vissza</a>
+				<% }else if(mod=="userEdit"){ %>
+				<a class="btn btn-info" href="/owndata">Vissza</a>
+				<% } %>
+				<a class="btn btn-info" href="/">Vissza a kezdőoldalra</a>
+			</div>
+		</div>
+		
+		<% include ../../common/footer %>
+		<% include ../../common/script %>
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Macskás blog - Admin - Felhasználók</title>
+		<% include ../../common/head %>
+	</head>
+	<body>
+		
+		<% include ../../common/header %>
+		
+		<div class="szovegdoboz">
+			<h1 id="black">Felhasználók listája:</h1>
+			<a class="btn btn-info" href="/user/adminNew">Új felhasználó</a>
+		</div>
+		<div class="szovegdoboz">
+			<hr>
+			<table>
+				<tr>
+					<th>Felhasználónév</th>
+					<th>E-Mail cím</th>
+					<th>Műveletek</th>
+				</tr>
+				<% for(var i=0; i<users.length; i++){ %>
+				<tr>
+					<td><%=users[i].username %></td>
+					<td><%=users[i].email %></td>
+					<td>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<a class="btn btn-info" href="/user/adminEdit/<%=users[i]._id %>">Szerkesztés</a>
+							<a class="btn btn-info" href="/userdelete/<%=users[i]._id %>">Törlés</a>
+						</div>
+					</td>
+				</tr>
+				<% } %>
+			</table>
+			<hr>
+		</div>
+		<div class="szovegdoboz">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<a class="btn btn-info" href="">Az oldal tetejére</a>
+				<a class="btn btn-info" href="/">Vissza a kezdőoldalra</a>
+			</div>
+		</div>
+		
+		<% include ../../common/footer %>
+		<% include ../../common/script %>
+		
+	</body>
+</html>

@@ -138,7 +138,9 @@ body {
 .szovegdoboz a,.szovegdoboz a:hover,.szovegdoboz a:visited{
 	color: black;
 }
-
+.szovegdoboz .formuser{
+	width: 30%;
+}
 
 
 /* 
