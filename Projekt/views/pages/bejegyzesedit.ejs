@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Macskás blog - Felhasználó szerkesztő</title>
+		<% include ../common/head %>
+	</head>
+	<body>
+		
+		<% include ../common/header %>
+		
+		<div class="szovegdoboz">
+			<%if(mod=="edit"){ %>
+			<h1 id="black">Bejegyzés edit</h1>
+			<% } %>
+			<%if(mod == "new"){ %>
+			<h1 id="black">Bejegyzés create</h1>
+			<% } %>
+			<div class="formuser">
+				<form method="POST" action="">
+					<% if(mod=="new"){ %>
+					<input type="hidden" name="username" value="<%=user %>" />
+					<input type="text" name="cim" placeholder="Cím" class="form-control" />
+					<input type="file" name="kep" id="kep">
+					<select name="tema">
+						<option value="Fajták">Fajták</option>
+						<option value="Betegségek">Betegségek</option>
+						<option value="Érdekességek">Érdekességek</option>
+					</select>
+					<textarea cols="100" rows ="15" name="tartalom"></textarea>
+					<button type="submit" class="btn btn-default btn-block btn-custom">Küldés</button>
+					<% }else if(mod=="edit"){ %>
+					<input type="hidden" name="_id" value="<%=bejegyzes._id %>" />
+					<input type="hidden" name="username" value="<%=user %>" />
+					<input type="text" name="cim" placeholder="Cím" class="form-control" value="<%=bejegyzes.cim %>" />
+					<select name="tema">
+						<% if(bejegyzes.tema=="Fajták"){ %>
+						<option value="Fajták" selected>Fajták</option>
+						<% } else{ %>
+						<option value="Fajták">Fajták</option>
+						<% } %>
+						<% if(bejegyzes.tema=="Betegségek"){ %>
+						<option value="Betegségek" selected>Betegségek</option>
+						<% } else{ %>
+						<option value="Betegségek">Betegségek</option>
+						<% } %>
+						<% if(bejegyzes.tema=="Érdekességek"){ %>
+						<option value="Érdekességek" selected>Érdekességek</option>
+						<% } else{ %>
+						<option value="Érdekességek">Érdekességek</option>
+						<% } %>
+					</select>
+					<textarea cols="100" rows ="15" name="tartalom"><%=bejegyzes.tartalom %></textarea>
+					<button type="submit" class="btn btn-default btn-block btn-custom">Küldés</button>
+					<% }else { %>
+					<p>Váratlan hiba történt</p>
+					<% } %>
+				</form>
+			</div>
+		</div>
+		<div class="szovegdoboz">
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<a class="btn btn-info" href="/">Vissza a kezdőoldalra</a>
+			</div>
+		</div>
+		
+		<% include ../common/footerFixed %>
+		<% include ../common/script %>
+		
+	</body>
+</html>

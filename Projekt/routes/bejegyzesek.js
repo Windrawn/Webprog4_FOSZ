@@ -53,5 +53,13 @@ router.get('/erdekessegek',
 	}
 );
 
+router.get('/bejegyzesedit/:mod',function(req, res){
+	res.render('pages/bejegyzesedit',{mod: req.params.mod });
+});
+
+router.get('/bejegyzesedit/:mod/:id',function(req, res){
+	res.render('pages/bejegyzesedit',{mod: req.params.mod, bejegyzes: {} });
+});
+
 
 module.exports = router;

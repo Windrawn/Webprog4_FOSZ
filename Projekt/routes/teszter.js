@@ -3,6 +3,17 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/teszt', function (req, res) {
+	res.render('pages/bejegyzesedit',{mod: "edit", bejegyzes: {
+		_id: 1,
+		username: "Test",
+		tema: "Fajták",
+		cim: "Test",
+		tartalom: "Test",
+		kep: ""
+	}});
+});
+/*
+router.get('/teszt', function (req, res) {
 	res.render('pages/admin/users',{users: [
 		{
 		_id: 1,
@@ -30,5 +41,5 @@ router.get('/teszt2', function (req, res) {
 		admin: true
 	}});
 });
-
+*/
 module.exports = router;
