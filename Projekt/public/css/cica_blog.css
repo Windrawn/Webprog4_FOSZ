@@ -123,6 +123,7 @@ body {
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 20px;
+
 }
 
 .szovegdoboz #black{
@@ -328,4 +329,19 @@ path.two {
 
 .right{
 	float: left;
+}
+
+
+/* 
+	
+	------------------- Betűtípusok -------------------
+
+*/
+
+
+.fancy_text {
+	font-family: Spicy Rice;
+	font-size: 50px;
+	text-shadow: 4px 4px 8px #000;
+	margin-bottom: 15px;
 }
