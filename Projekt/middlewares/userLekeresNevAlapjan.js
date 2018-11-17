@@ -1,6 +1,6 @@
 var a;
 
-function userLekeresLista(objectRepository, username, callback) {
+function userLekeresNevAlapjan(objectRepository, username, callback) {
 		objectRepository.modelUser.find({username: username}, "_id username email admin")
 		.exec(function (err, response) {
 			if (Array.isArray(response) && response.length) {
@@ -14,4 +14,4 @@ function userLekeresLista(objectRepository, username, callback) {
 		return null;
 }
 
-module.exports = userLekeresLista;
+module.exports = userLekeresNevAlapjan;
