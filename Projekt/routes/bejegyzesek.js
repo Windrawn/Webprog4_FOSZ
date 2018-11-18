@@ -61,5 +61,14 @@ router.get('/bejegyzesedit/:mod/:id',function(req, res){
 	res.render('pages/bejegyzesedit',{mod: req.params.mod, bejegyzes: {} });
 });
 
+/*
+var uploader = new require('../middlewares/erdekessegUploadAll');
+
+router.get('/erdekessegUploadAllOneTimer', function () {
+	uploader(objectRepository, function(){
+		console.log('Sikeresen hozzaadva!');
+	});
+})
+*/
 
 module.exports = router;
