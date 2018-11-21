@@ -8,7 +8,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Abesszin',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/abesszin.jpg'
+		kep: '/img/fajtak/abesszin.jpg'
 	};
 	var doc2 = {
 		_id: new ObjectID(),
@@ -16,7 +16,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Alpinelynx',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/alpinelynx.jpg'
+		kep: '/img/fajtak/alpinelynx.jpg'
 	};
     var doc3 = {
 		_id: new ObjectID(),
@@ -24,7 +24,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Amerikaidrotszoru',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/amerikaidrotszoru.jpg'
+		kep: '/img/fajtak/amerikaidrotszoru.jpg'
 	};
 	var doc4 = {
 		_id: new ObjectID(),
@@ -32,7 +32,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Bengali',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/bengali.jpg'
+		kep: '/img/fajtak/bengali.jpg'
 	};
     var doc5 = {
 		_id: new ObjectID(),
@@ -40,7 +40,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Bristol',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/bristol.jpg'
+		kep: '/img/fajtak/bristol.jpg'
 	};
 	var doc6 = {
 		_id: new ObjectID(),
@@ -48,7 +48,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Britrovidszoru',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/britrovidszoru.jpg'
+		kep: '/img/fajtak/britrovidszoru.jpg'
 	};
     var doc7 = {
 		_id: new ObjectID(),
@@ -56,7 +56,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Burma',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/burma.jpg'
+		kep: '/img/fajtak/burma.jpg'
 	};
 	var doc8 = {
 		_id: new ObjectID(),
@@ -64,7 +64,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Burmilla',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/burmilla.jpg'
+		kep: '/img/fajtak/burmilla.jpg'
 	};
     var doc9 = {
 		_id: new ObjectID(),
@@ -72,7 +72,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Colorpointrovidszoru',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/colorpointrovidszoru.jpg'
+		kep: '/img/fajtak/colorpointrovidszoru.jpg'
 	};
 	var doc10 = {
 		_id: new ObjectID(),
@@ -80,7 +80,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Devonrex',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/devonrex.jpg'
+		kep: '/img/fajtak/devonrex.jpg'
 	};
     var doc11 = {
 		_id: new ObjectID(),
@@ -88,7 +88,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Doniszfinx',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/doniszfinx.jpg'
+		kep: '/img/fajtak/doniszfinx.jpg'
 	};
 	var doc12 = {
 		_id: new ObjectID(),
@@ -96,7 +96,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Egyiptomimau',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/egyiptomimau.jpg'
+		kep: '/img/fajtak/egyiptomimau.jpg'
 	};
     var doc13 = {
 		_id: new ObjectID(),
@@ -104,7 +104,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Hocipos',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/hocipos.jpg'
+		kep: '/img/fajtak/hocipos.jpg'
 	};
 	var doc14 = {
 		_id: new ObjectID(),
@@ -112,7 +112,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Japancsonkafarku',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/japancsonkafarku.jpg'
+		kep: '/img/fajtak/japancsonkafarku.jpg'
 	};
     var doc15 = {
 		_id: new ObjectID(),
@@ -120,7 +120,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Kanaani',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/kanaani.jpg'
+		kep: '/img/fajtak/kanaani.jpg'
 	};
 	var doc16 = {
 		_id: new ObjectID(),
@@ -128,7 +128,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Karthauzi',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/karthauzi.jpg'
+		kep: '/img/fajtak/karthauzi.jpg'
 	};
     var doc17 = {
 		_id: new ObjectID(),
@@ -136,7 +136,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Mainecoon',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/mainecoon.jpg'
+		kep: '/img/fajtak/mainecoon.jpg'
 	};
 	var doc18 = {
 		_id: new ObjectID(),
@@ -144,7 +144,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Manx',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/manx.jpg'
+		kep: '/img/fajtak/manx.jpg'
 	};
     var doc19 = {
 		_id: new ObjectID(),
@@ -152,7 +152,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Norvegerdei',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/norvegerdei.jpg'
+		kep: '/img/fajtak/norvegerdei.jpg'
 	};
 	var doc20 = {
 		_id: new ObjectID(),
@@ -160,7 +160,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Oroszkek',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/oroszkek.jpg'
+		kep: '/img/fajtak/oroszkek.jpg'
 	};
     var doc21 = {
 		_id: new ObjectID(),
@@ -168,7 +168,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Perzsa',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/perzsa.jpg'
+		kep: '/img/fajtak/perzsa.jpg'
 	};
 	var doc22 = {
 		_id: new ObjectID(),
@@ -176,7 +176,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Ragdoll',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/ragdoll.jpg'
+		kep: '/img/fajtak/ragdoll.jpg'
 	};
     var doc23 = {
 		_id: new ObjectID(),
@@ -184,7 +184,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Skotlogofulu',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/skotlogofulu.jpg'
+		kep: '/img/fajtak/skotlogofulu.jpg'
 	};
 	var doc24 = {
 		_id: new ObjectID(),
@@ -192,7 +192,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Szavanna',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/szavanna.jpg'
+		kep: '/img/fajtak/szavanna.jpg'
 	};
     var doc25 = {
 		_id: new ObjectID(),
@@ -200,7 +200,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Szfinx',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/szfinx.jpg'
+		kep: '/img/fajtak/szfinx.jpg'
 	};
 	var doc26 = {
 		_id: new ObjectID(),
@@ -208,7 +208,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Sziami',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/sziami.jpg'
+		kep: '/img/fajtak/sziami.jpg'
 	};
     var doc27 = {
 		_id: new ObjectID(),
@@ -216,7 +216,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Sziberiai',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/sziberiai.jpg'
+		kep: '/img/fajtak/sziberiai.jpg'
 	};
 	var doc28 = {
 		_id: new ObjectID(),
@@ -224,7 +224,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Tiffany',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/tiffany.jpg'
+		kep: '/img/fajtak/tiffany.jpg'
 	};
     var doc29 = {
 		_id: new ObjectID(),
@@ -232,7 +232,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'Torokangora',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/torokangora.jpg'
+		kep: '/img/fajtak/torokangora.jpg'
 	};
 	var doc30 = {
 		_id: new ObjectID(),
@@ -240,7 +240,7 @@ function fajtakUploadAll(objectRepository, callback) {
 		tema: 'Fajták',
 		cim: 'York',
 		tartalom: 'Egy cicafajta',
-		kep: '../public/img/fajtak/york.jpg'
+		kep: '/img/fajtak/york.jpg'
 	};
 
 
