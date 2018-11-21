@@ -62,6 +62,15 @@ router.get('/bejegyzesedit/:mod/:id',function(req, res){
 });
 
 /*
+var uploader = new require('../middlewares/fajtakUploadAll');
+
+router.get('/fajtakUploadAllOneTimer', function () {
+	uploader(objectRepository, function(){
+		console.log('Sikeresen hozzaadva!');
+	});
+})
+
+
 var uploader = new require('../middlewares/erdekessegUploadAll');
 
 router.get('/erdekessegUploadAllOneTimer', function () {
