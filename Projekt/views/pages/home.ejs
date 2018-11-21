@@ -14,14 +14,14 @@
 		<div class="container">
 			<div class="szovegdoboz">
 				<% if (!login) { %>
-				<h1 id="black"><i><b>Üdvözlünk a Macskás blogon! :)</b></i></h1>
+				<h1 class="fancy_text_main"><i><b>Üdvözlünk a Macskás blogon!  :)</b></i></h1>
 				<% } else { %>
-				<h1 id="black"><i><b>Üdvözlünk a Macskás blogon, <%= nev %>! :)</b></i></h1>
+				<h1 class="fancy_text_main"><i><b>Üdvözlünk a Macskás blogon, <%= nev %>! :)</b></i></h1>
 				<% } %>
-				<p>Ez a blog macskásoknak, macska imádóknak, illetve leendő macska tartóknak jött létre.</p> 
-				<p>Itt meg tekintheted a macska fajtákat, a macska betegségeket, illetve érdekességeket találhatsz a macskákról.</p>
+				<p class="fancy_text_egyeb">Ez a blog macskásoknak, macska imádóknak, illetve leendő macska tartóknak jött létre.</p> 
+				<p class="fancy_text_egyeb">Itt meg tekintheted a macska fajtákat, a macska betegségeket, illetve érdekességeket találhatsz a macskákról.</p>
 				<% if (!login) { %>
-				<p>Új bejegyzés írásához be kell jelentkezni!</p>
+				<p class="fancy_text_egyeb">Új bejegyzés írásához be kell jelentkezni!</p>
 				<% } %>
 			</div>
 		</div>

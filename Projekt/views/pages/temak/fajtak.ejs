@@ -10,14 +10,14 @@
 		
 		<div class="container">
 			<div class="szovegdoboz">
-				<h1 id="black">Fajták:</h1>
+				<h1 class="fancy_text"><center>Macskafajták</center></h1>
 				<br>
 				<% if (login) { %>
 				<a class="btn btn-primary" href="/bejegyzesedit/new">Új bejegyzés</a>
 				<% } %>
 			</div>
 			<div class="szovegdoboz">
-				<hr>
+				<hr class="fancy_hr_egyeb">
 				<% for(var i=0; i<bejegyzesek.length;i++){
 				if (typeof !user){
 				$enyem=false
@@ -33,15 +33,21 @@
 						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
 					</div>
 					<div class="col-md-7">
-						<h3><%= bejegyzesek[i].cim %></h3>
-						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<h3 class="fancy_text"><%= bejegyzesek[i].cim %></h3>
+						<p class="uploader">Feltöltötte: <%= bejegyzesek[i].username %></p>
 						<div class="btn-group" role="group" aria-label="Basic example">
-							<a class="btn btn-primary" href="/bejegyzes/<%= bejegyzesek[i]._id %>">Tovább</a>
-							<a class="btn btn-secondary" href="/bejegyzesedit/edit/<%= bejegyzesek[i]._id %>">Szerkesztés</a>
+							<div class="wrapper">
+								<a class="buttonDiv_sample left" href="/bejegyzes/<%= bejegyzesek[i]._id %>">
+							    	<span>Tovább</span>
+							  	</a>
+					    		<a class="buttonDiv_sample right" href="/bejegyzesedit/edit/<%= bejegyzesek[i]._id %>">
+							    	<span>Szerkesztés</span>
+							  	</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<hr>
+				<hr class="fancy_hr_egyeb">
 				<% }else { %>
 				<div class="row">
 					<div class="col-md-5">
@@ -49,12 +55,12 @@
 					</div>
 					<div class="col-md-7">
 						<h3><%= bejegyzesek[i].cim %></h3>
-						<h4>Típus: <%= bejegyzesek[i].tartalom %></h4>
-						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<h4 class="fancy_text_egyeb">Típus: <%= bejegyzesek[i].tartalom %></h4>
+						<p class="uploader">Feltöltötte: <%= bejegyzesek[i].username %></p>
 						<a class="btn btn-secondary" href="#">Szerkesztés</a>
 					</div>
 				</div>
-				<hr>
+				<hr class="fancy_hr_egyeb">
 				<% } %>
 				
 				<% }else { %>
@@ -65,39 +71,49 @@
 						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
 					</div>
 					<div class="col-md-7">
-						<h3><%= bejegyzesek[i].cim %></h3>
-						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<h3 class="fancy_text_H"><%= bejegyzesek[i].cim %></h3>
+						<p class="uploader">Feltöltötte: <%= bejegyzesek[i].username %></p>
 						<a class="btn btn-primary" href="/bejegyzes/<%= bejegyzesek[i]._id %>">Tovább</a>
 					</div>
 				</div>
-				<hr>
+				<hr class="fancy_hr_egyeb">
 				<% }else { %>
 				<div class="row">
 					<div class="col-md-5">
 						<img class="img-fluid rounded mb-3 mb-md-0" src="<%= bejegyzesek[i].kep %>" alt="">
 					</div>
 					<div class="col-md-7">
-						<h3><%= bejegyzesek[i].cim %></h3>
-						<h4>Típus: <%= bejegyzesek[i].tartalom %></h4>
-						<p>Feltöltő: <%= bejegyzesek[i].username %></p>
+						<h3 class="fancy_text_H"><%= bejegyzesek[i].cim %></h3>
+						<h4 class="fancy_text_egyeb">Típus: <%= bejegyzesek[i].tartalom %></h4>
+						<p class="uploader">Feltöltötte: <%= bejegyzesek[i].username %></p>
 					</div>
 				</div>
-				<hr>
+				<hr class="fancy_hr_egyeb">
 				<% } %>
 				
 				<% } %>
 				<% } %>
 				<% if (bejegyzesek.length == 0) { %>
 				<h2>Sorry, nincs bejegyzés ebben a témában</h2>
-				<hr>
+				<hr class="fancy_hr_egyeb">
 				<% } %>
 				
 			</div>
 			<div class="szovegdoboz">
 				<div class="btn-group" role="group" aria-label="Basic example">
-					<a class="btn btn-info" href="">Az oldal tetejére</a>
-					<a class="btn btn-info" href="/tema">Vissza</a>
-					<a class="btn btn-info" href="/">Vissza a kezdőoldalra</a>
+
+					<div class="wrapper">
+						<a class="buttonDiv_sample left" href="/fajtak">
+							    	<span>Az oldal tetejére</span>
+							  		</a>
+					     <a class="buttonDiv_sample right" href="/tema">
+							    	<span>Vissza</span>
+							  		</a>
+
+						<a class="buttonDiv_sample right" href="/">
+							    	<span>Vissza a nyitólapra</span>
+							  		</a>
+					</div>
 				</div>
 			</div>
 		</div>

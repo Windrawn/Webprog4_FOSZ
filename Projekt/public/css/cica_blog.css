@@ -10,6 +10,9 @@
 @import url('http://fonts.googleapis.com/css?family=Berkshire+Swash');
 @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
 @import url('https://fonts.googleapis.com/css?family=Spicy+Rice');
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Shojumaru');
 
 /* 
 	
@@ -25,7 +28,7 @@ body, html {
 
 body {
     background: linear-gradient(132deg, #4d4dff, #262626);
-    background-size: 300% 300%;
+    background-size: 3500% 3500%;
     animation: BackgroundGradient 30s ease infinite;
 }
 
@@ -217,6 +220,27 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
+.fancy_hr_egyeb { 
+  color: #4d4dff;
+  overflow: visible;
+  height: 30px; 
+  border-style: solid; 
+  border-color: black; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+  } 
+
+.fancy_hr_egyeb:before {
+  color: #4d4dff;
+  display: block; content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: black;
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
 
 /* 
 	
@@ -340,6 +364,7 @@ path.two {
 
 .right{
 	float: left;
+  margin-right: 40px;
 }
 
 
@@ -349,12 +374,45 @@ path.two {
 
 */
 
+.fancy_text_main {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #262626 0%, #4d4dff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  size: 50px;
+  font-family: Spicy Rice;
+}
 
 .fancy_text {
 	font-family: Spicy Rice;
 	font-size: 50px;
 	text-shadow: 4px 4px 8px #000;
 	margin-bottom: 15px;
+}
+
+.fancy_text_H {
+  font-family: Spicy Rice;
+  font-size: 30px;
+  text-shadow: 4px 4px 8px #4d4dff;
+  margin-bottom: 15px;
+}
+
+.fancy_text_egyeb {
+  font-family: Allerta Stencil;
+  font-size: 15px;
+}
+
+p.uploader {
+  font-family: Luckiest Guy;
+  font-size: 15px;
+  color: green;
+
+
+}
+
+.fancy_text_footer{
+  font-family: Shojumaru;
+  font-size: 25px;
 }
 
 
