@@ -34,4 +34,4 @@ app.use('/', weboldalRoutes);
 app.use('/', userRoutes);
 app.use('/', bejegyzesekRoutes);
 
-app.listen(8080); 
+app.listen(8081); 

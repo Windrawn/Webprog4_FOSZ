@@ -25,4 +25,8 @@ router.get('/tema', function (req, res) {
 	res.render('pages/temak/tema');
 });
 
+router.get('/webshop', function (req, res) {
+  res.render('pages/webshop');
+});
+
 module.exports = router;
