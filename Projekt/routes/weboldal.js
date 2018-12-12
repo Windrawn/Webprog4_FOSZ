@@ -25,9 +25,6 @@ router.get('/tema', function (req, res) {
 	res.render('pages/temak/tema');
 });
 
-router.get('/webshop', function (req, res) {
-  res.render('pages/webshop');
-});
 
 router.get('/angular', function (req, res) {
   res.render('pages/angular-app/src/index');
