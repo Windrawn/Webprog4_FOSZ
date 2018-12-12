@@ -31,7 +31,7 @@
 		            <div ng-if="cart.length == 0">
 		                A kosár üres
 		            </div>
-		            <ul class="list-group fancy_text_egyeb">
+		            <ul class="list-group fancy_webshop_text">
 		                <li class="list-group-item" ng-repeat="item in cart">
 		                    {{ item.name }} <span class="label label-info">{{ item.price | currency : 'HUF ' : 0 }}</span> <span class="label label-default">{{ item.amount }} db</span> 
 		                    <button type="button" class="btn btn-danger btn-xs pull-right" ng-click="removeFromCart(item.id)">X</button>
@@ -46,7 +46,7 @@
 		    <div class="panel panel-primary margin_fix">
 		        <div class="panel-heading fancy_text_egyeb fancy_ph">Termékek</div>
 		        <div class="panel-body fancy_pb">
-		            <ul class="list-group fancy_text_egyeb fancy_pb">
+		            <ul class="list-group fancy_webshop_text fancy_pb">
 		                <li class="list-group-item" ng-repeat="item in items">
 		                    {{ item.name }} - {{ item.price | currency : 'HUF ' : 0 }}
 		                    <button type="button" class="btn btn-primary btn-xs pull-right" ng-click="addToCart(item)">Add</button>

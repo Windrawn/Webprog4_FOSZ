@@ -179,7 +179,7 @@ body {
 .fancy_pb{
 
   background-image: -webkit-linear-gradient(left,#4d4dff 0, #1e1e66 100%);
-
+  color: black;
 
 
 }
@@ -442,6 +442,12 @@ p.uploader {
   font-size: 25px;
 }
 
+
+.fancy_webshop_text{
+
+  font-size: 15px;
+
+}
 
 /* 
 	
