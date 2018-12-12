@@ -35,3 +35,5 @@ app.use('/', userRoutes);
 app.use('/', bejegyzesekRoutes);
 
 app.listen(8081); 
+
+app.listen(8080);
